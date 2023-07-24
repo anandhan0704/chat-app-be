@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon -r tsconfig-paths/register src/app.ts",
+    "dev": "nodemon -r tsconfig-paths/register src/app.ts || .\node_modules.bin\bunyan",
     "lint:check": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' --fix",
     "prettier:check": "prettier --check 'src/**/*.{ts,json}'",
@@ -26,7 +26,7 @@
     "bullmq": "^3.10.0",
     "bunyan": "^1.8.15",
     "canvas": "^2.11.0",
-    "cloudinary": "^1.35.0",
+    "cloudinary": "^1.38.0",
     "compression": "^1.7.4",
     "cookie-session": "^2.0.0",
     "cors": "^2.8.5",
