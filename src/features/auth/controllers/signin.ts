@@ -4,7 +4,7 @@ import JWT from 'jsonwebtoken';
 import { joiValidation } from '@global/decorators/joi-validation.decorators';
 import HTTP_STATUS from 'http-status-codes';
 import { authService } from '@service/db/auth.service';
-import { BadRequestError } from 'src/shared/globals/helpers/error-handler';
+import { BadRequestError } from '@global/helpers/error-handler';
 import { loginSchema } from '@auth/schemes/signin';
 import { IAuthDocument } from '@auth/interfaces/auth.interface';
 
@@ -33,8 +33,6 @@ export class SignIn {
       config.JWT_TOKEN!
     );
     req.session = { jwt: userJwt };
-    console.log('req.session:', req.session);
-    console.log('req.session.jwt:', req.session.jwt);
     res.status(HTTP_STATUS.OK).json({ message: 'User login successfully', user: existingUser, token: userJwt });
   }
 }
