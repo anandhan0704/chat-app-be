@@ -26,7 +26,7 @@ class UserService {
     ]);
     return users[0];
   }
-
+  
   private aggregateProject() {
     return {
       _id: 1,
